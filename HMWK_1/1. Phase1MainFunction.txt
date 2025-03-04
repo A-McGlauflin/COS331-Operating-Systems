@@ -1,0 +1,17 @@
+Construct the main function for our Operating System simulator using C. Consult the attached .c file for some tips.
+
+-Functional OS loop, with branching based on opcode (no implementations for opcodes required yet, just need to be able to distinguish between opcodes): 50%
+
+-Operating system state correctly defined (all registers and required data members present): 25%
+
+-Working file input (to be used to determine opcode): 25%
+
+If your code fails to compile due to syntax errors: -75%
+
+Segmentation faults and logic errors will count against the portions above.
+
+When grading, I will check your loop to see if it can extract the opcode from a file. One such file is provided as "testProcess.txt". You may hard code this file input, query the user, or provide a launch parameter with the file name.
+
+Make sure to only submit your source code (.c) and no compiled files; these will not be accepted. Submissions via email will be ignored and deleted.
+
+This assignment is due Thursday, September 19, by 12:30 PM.

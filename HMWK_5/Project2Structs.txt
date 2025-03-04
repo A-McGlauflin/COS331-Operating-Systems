@@ -1,0 +1,26 @@
+Handle multiple programs and store their states in PCB's (as defined in class), which are held in a linked list. Each 
+program we load will be executed serially...for now. This means one program will fully complete, then the next one up 
+will fully complete, and so on. Your previous two test programs will be used to test PCB handling for this phase, and 
+thus must be read in simultaneously.
+
+-Can read up to 10 programs*, assigning 100 lines in memory to each, and requiring the size of your memory array to 
+be 1000x6: 30%
+
+-PCB's are represented by structs that are separate from the registers we have already defined (i.e. PCB1->ACC is not 
+the same as ACC; your opcodes should never write to a struct, only a context switch can do this): 40%
+
+-Structs are connected via a linked list, and attempts to access a given PCB are handled via linked list traversal only: 30%
+
+*When I test your interpreter I will read one of your programs, then both of your programs, then both of your programs 
+a random number of times each (between 1 and 10 of course). You will not be able to get by hard-coding the number of 
+expected programs here though, which is also why a linked list is required.
+
+**Compilation is expected every time, will result in a 0 if I cannot determine it to be an issue on my machine.
+
+Testing your file i/o in this case will involve me dumping your memory variable to test if each program has been loaded. 
+This is a fairly black and white case, however testing for correctness of the linked list will be largely handled 
+through tracing your execution, and thus have no concrete metric for success. Using gdb instruction stepping, I should be 
+able to see linked list traversal occuring, and each program executing one at a time, and watching this behavior will 
+indicate to me whether you were successful or not.
+
+Submit your updated interpreter, along with your two PBrain programs, in an archive. This assignment will be due 10/31 at 12:30 PM

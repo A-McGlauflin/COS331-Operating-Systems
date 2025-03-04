@@ -1,0 +1,26 @@
+Implement opcodes 00 through 15. This can be accomplished in any manner of your choosing, as long 
+as the provided test program can run successfully. Possible approaches include using one function 
+per opcode, or a small family of functions for similar opcodes. Implementing the entirety of your 
+opcode handlers inside your main function is not allowed however. Refer to slides over the last 
+two weeks for tips on how to code these.
+
+-Accumulator operations implemented correctly: 40%   
+(Accumulator contains X, Memory 20 contains 990050, Memory 21 contains 990060)
+
+-Register operations implemented correctly: 40%    
+(R3 contains 50, R2 contains 50)
+
+-Pointer register operations implemented correctly: 20%   
+(P0 contains 20, P1 contains 21)
+
+-If your code fails to compile due to syntax errors: -75%
+
+When grading, I will run a single test program that will test the required operations. This test
+program is provided to you, and thus you should test your interpreter before submitting using it. I 
+will use debuggers on your source code to expose the values in memory to check and see that each 
+operation is performed correctly. Not all opcodes are included in the test program, but major pieces 
+of functionality will be covered (immediate addressing, pointer registers, operand char -> int conversion). 
+
+Make sure to only submit your source code (.c) and no compiled files; these will not be accepted.
+
+This assignment is due Thursday, September 26, by 12:30 PM.

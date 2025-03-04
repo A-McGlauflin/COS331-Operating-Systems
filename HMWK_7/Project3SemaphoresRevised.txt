@@ -1,0 +1,36 @@
+Our operating system has come a long way, but it requires one extra layer of complexity before we can 
+say we have made an operating system in its entirety*. Project 3 will focus on synchronization of 
+processes and will tackle the numerous issues that come with. The first phase of this project will 
+require you to implement Opcodes 36 and 37 (to be discussed in class) as well as your semaphore struct. 
+You will also be required to write one new PBrain program that uses these opcodes and the semaphore, 
+to be run 1-10 times concurrently (in a manner we have used for different programs in Project 2). This 
+program is only needed to test the semaphore in this phase, but later it will be modified to create 
+problems for our operating system (on purpose).
+
+Your test program does not need to be elaborate but it should have a defined critical section in which 
+a few opcodes (3 or more) are performed, and use opcode 36 and 37. We are not concerned with the 
+instructions in the critical section at this time so it is sufficient to use the no-op opcode. There 
+should be multiple no-ops between the semaphore calls however. It should also have a long (not 
+infinite!) loop that reruns the critical section.
+
+Opcode 36 works; note this will require you to handle the three system calls below it as well: 25%
+
+Note: Opcode 36 expects two operands. Operand one is the data register (R0-R3) that contains the value 
+for the system call, and operand two is the data register (R0-R3) that contains the operand for the call. 
+When using a semaphore, operand two should be a register for which semaphore ID you're refering to. 
+
+Opcode 37 works; this is just modulo so its easy to tell if it works or not by looking at its outputs 
+and inputs: 15%
+
+Opcode 38 works; its just a no-op: 5%
+
+Instruction Counter as a startup parameter; Assume argv[1] is an integer to represent the instruction 
+counter for each process. We need to modify this to test our semaphores: 5%
+
+Semaphore structs working; I will run your multiple instances of your test program with instruction 
+counters that will allow each to execute the critical section, and it should not be possible for more 
+than one process to execute the critical section at a time: 50%
+
+Submit your interpreter and test program in an archive file.
+
+This assignment is due 12/3 at 12:30 PM
